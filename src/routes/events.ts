@@ -350,7 +350,7 @@ eventsRouter.post(
   async (req: Request, res: Response): Promise<void> => {
     try {
       const { eventId, inviteeEmail, inviterEmail } = req.body;
-      const eventLink = `${process.env.FRONTEND_URL}/events/${eventId}?guest=true&public=true`;
+      const eventLink = `${process.env.FRONTEND_URL}/events/${eventId}?private=true`;
 
       const subject = "You're invited to an event!";
       const text = `
